@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="meu salgado favorito.css">
+    <title> Meu Salgado Favorito</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Meu Salgado Favorito</h1>
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="cardapio">
+        <h2>Cardápio</h2>
+        <ul>
+            <li> Pastel de queijo - R$ 2,50 <button onclick="fazerPedido('Pastel de queijo', 2.50)">Pedir</button></li>
+            <li> Pastel de misto - R$ 2,50 <button onclick="fazerPedido('pastel de misto', 2.50)">pedir</button></li>
+            <li> pastel de calabresa com queijo - R$ 2,50 <button onclick="fazerPedido('Pastel de calabresa com queijo',2.50)">pedir</button></li>
+            <li> Pastel de carne - R$ 3,00 <button onclick="fazerPedido('Pastel de carne',3.00)">Pedir</button></li>
+            <li> Pastel de frango com catupiry - R$ 3,00 <button onclick="fazerPedido('Pastel de frango com catupiry',3.00)">pedir</button></li>
+            <li> Coxinha de carne - R$ 3,50 <button onclick="fazerPedido('Coxinha de carne', 3.50)">Pedir</button></li>
+            <li> Coxinha de carne - R$ 4,00 <button onclick="fazerPedido('Coxinha de carne', 4.00)">Pedir</button></li>
+        
+           <section id="Bebidas">
+            <h3>Bebidas</h2>
+           <li> Caldo de cana 400ML - R$ 4,00 <button onclick="fazerPedido('Caldo de cana 400ML', 4.00)">pedir</button></li>
+           <li> Caldo de cana 300ML - R$ 3,00 <button onclick="fazerPedido('Caldo de cana 300ML', 3.00)">Pedir</button></li>
+           <li> Coca Cola 350ML - R$ 6,00 <button onclick="fazerPedido('Coca Cola 350ML', 6.00)">pedir</button></li>
+           <li> Pepsi 350ML - R$ 6,00 <button onclick="fazerPedido('Pepsi 350ML', 6.00)">pedir</button></li>
+           <li> Fanta laranja 350ML - R$ 6,00 <button onclick="fazerPedido('Fanta laranja 350Ml', 6.00)">pedir</button></li>
+           <li> Fanta uva 350ML - R$ 6,00 <button onclick="fazerPedido('Fanta uva 350Ml', 6.00)">pedir</button></li>
+           <li> Guarana lata 350ML - R$ 6,00 <button onclick="fazerPedido('Guarana lata 350ML', 6.00)">pedir</button></li>
+           <li> Fys laranja 350ML - R$ 6,00 <button onclick="fazerPedido('Fys laranja 350ML', 6.00)">pedir</button></li>
+           <li> Coca Cola 200Ml - R$ 3,00 <button onclick="fazerPedido('Coca Cola 200ML', 3.00)">pedir</button></li>
+           <li> Pepsi cola 200ML - R$ 2,50 <button onclick="fazerPedido('Pepsi cola 200ML', 2.50)">pedir</button></li>
+           <li> Coca Cola 2L - R$ 14,00 <button onclick="fazerPedido('Coca Cola 2L', 14.00)">pedir</botton></li>
+           <li> Coca Cola 1L - R$ 10,00 <button onclick="fazerPedido('Coca Cola 1L', 10.00)">pedir</button></li>
+           <li> Pepsi 2l - R$ 12,00 <button onclick="fazerPedido('Pepsi 2L', 12.00)">pedir</button></li>
+           <li> Pepsi 1L -  R$ 8,00 <button onclick="fazerPedido('Pepsi 1L', 8.00)">pedir</button><li>
+           <li> Guarana 2l - R$ 10,00 <button onclick="fazerPedido('Guarana 2L', 12.00)">pedir</button></li>
+           <li> Guarana 1l - R$ 8,00 <button onclick="fazerPedido('Guarana 1L', 8.00)">pedir</button></li>
+
+
+
+        </ul>
+    </section>
+    <button onclick="mostrarCarrinho()">Ver Carrinho</button>
+<div id="carrinho" style="display: none;">
+  <h3>Seu Carrinho</h3>
+  <ul id="lista-carrinho"></ul>
+  <p>Total: R$ <span id="total"></span></p>
+  <button onclick="finalizarPedido()">Finalizar Pedido</button>
+</div>
+
+<div id="form-finalizar" style="display: none;">
+  <h3>Finalizar Pedido</h3>
+  <label>Nome: <input type="text" id="nome"></label><br>
+  <label>Endereço: <input type="text" id="endereco"></label><br>
+  <label>Forma de Pagamento: 
+    <select id="pagamento">
+      <option>Dinheiro</option>
+      <option>Pix</option>
+      <option>Cartão</option>
+    </select>
+  </label><br>
+  <label>Celular: <input type="text" id="celular"></label><br>
+  <button onclick="confirmarPedido()">Confirmar Pedido</button>
+</div>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>WhatsApp: (82) 99108-4029</p>
+        <p>Endereço: Rua Presidente Kenedy</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Meu Salgado Favorito</p>
+    </footer>
+
+    <script src="function fazerpedido(item).js"></script>
+    
+<h1>
+    <span class="meu">Meu</span>
+    <span class="salgado">Salgado</span>
+    <span class="favorito">Favorito</span>
+</h1>
+<p class="frase">Seu lanche do dia, todo dia!</p>
+<script src="meu salgado favorito.js" defer></script>
+</body> 
+</html>
