@@ -1,10 +1,8 @@
-
-
 let carrinho = [];
 
 function fazerPedido(item, preco) {
   carrinho.push({ item, preco });
-  alert('você pediu: ${item} + adicionado ao carrinho! Obrigado pela preferência');
+  alert(`Você pediu: ${item} adicionado ao carrinho!`);
 }
 
 function mostrarCarrinho() {
@@ -60,12 +58,14 @@ function confirmarPedido() {
     mensagem += `Celular para contato: ${celular}\n`;
   }
 
-  const telefone = "5582991084029";  // seu número com DDI + DDD
+  const telefone = "5582991084029"; // Seu número com DDI + DDD
   const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
 
   window.open(url, "_blank");
-}
-  // Aqui você pode enviar para um servidor ou WhatsApp
-  carrinho = [];  // Limpa o carrinho
+
+  // ✅ Limpar carrinho e esconder formulários após envio
+  carrinho = [];
   document.getElementById("carrinho").style.display = "none";
   document.getElementById("form-finalizar").style.display = "none";
+}
+
